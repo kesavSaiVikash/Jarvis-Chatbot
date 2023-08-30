@@ -1,10 +1,11 @@
 import "./App.css";
 import { useState } from "react";
 import { getResponse } from "./service/model-service";
-import { save, search } from "./service/data-store-service";
+import { save } from "./service/data-store-service";
 
 function App() {
   const [messageElements, setMessageElements] = useState([]);
+  const [userMessage, setUserMessage] = useState("");
 
   const getMessageElement = (message) => {
     return (
@@ -19,10 +20,7 @@ function App() {
     );
   };
 
-  const [userMessage, setUserMessage] = useState("");
-
   const addMessage = (messageText, isUserMessage) => {
-    console.log(messageElements.length);
     const message = { text: messageText, isUserMessage: isUserMessage };
     setMessageElements((currentMessageElements) => [
       ...currentMessageElements,
@@ -41,7 +39,7 @@ function App() {
 
   return (
     <div className="chat-container">
-      <div className="chat-header">Jarvis</div>
+      <div className="chat-header">Jarvis Text Generation Bot</div>
       <div className="messages" id="messages">
         {messageElements}
       </div>
