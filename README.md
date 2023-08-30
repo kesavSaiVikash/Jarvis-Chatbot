@@ -2,7 +2,7 @@
 
 ## Introductiton
 
-This a React based UI to utilize the gpt-2 model for a chat bot as an AI assistance. It uses hugging face inference API 
+This a React based UI to utilize the gpt-2 model for a chat/ text generative bot as an AI assistance. It uses hugging face inference API 
 to generate responses for user messages. The this messages will be displayed in the UI as in an ordinary chat window.
 Furthermore these chat messages and response will be stored in a vector db for caching the resposnes. 
 
@@ -10,6 +10,8 @@ Furthermore these chat messages and response will be stored in a vector db for c
 ## How to initialize
 
 1. Run 'npm install' to install all the required packages
+2. Make sure to update API_KEY in src/service/data-store-service.js with OpenAI API Key.
+3. Also make sure to update the  API_Key in src/service/model-service.js with Hugging face API key (Currently I am using my own private one).
 
 
 ## How to start the server
